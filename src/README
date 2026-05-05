@@ -1,0 +1,26 @@
+Configuración y Uso de Autoloading PSR-4
+Este proyecto utiliza Composer para gestionar la carga automática de clases siguiendo el estándar PSR-4, lo que elimina la necesidad de usar múltiples sentencias require o include.
+
+📋 Pasos para la Puesta en Marcha
+Descarga del código: Clona el repositorio mediante git clone <URL_DEL_REPO>.
+
+Acceso al proyecto: Ubícate en la carpeta raíz con cd psr4-lab.
+
+Configuración de dependencias: Ejecuta composer install. Si realizas cambios manuales en el archivo composer.json, utiliza composer dump-autoload para refrescar el mapa de clases.
+
+Prueba de funcionamiento: Inicia el script principal con el comando php index.php.
+
+🏗️ Arquitectura de Directorios y Espacios de Nombres
+El estándar PSR-4 vincula el namespace raíz App\ con el directorio src/. A continuación se detalla la jerarquía:
+
+Modelos: Las clases en App\Models\ residen en src/Models/ (ej. Student.php).
+
+Servicios: Las clases en App\Services\ residen en src/Services/ (ej. EnrollmentService.php).
+
+🖥️ Resultado Esperado en Consola
+Al procesar la lógica en index.php, deberías visualizar una salida similar a esta, confirmando que el autoloader ha localizado las clases correctamente:
+
+Bash
+$ php index.php
+Estudiante: Carlos Méndez (ID: 2026001) - Carrera: Ingeniería en Sistemas
+✅ Matrícula exitosa para Carlos Méndez.
